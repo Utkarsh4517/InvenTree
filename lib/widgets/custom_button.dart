@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:inventree/constants/colors.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
@@ -13,6 +14,17 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    double screenWidth = MediaQuery.of(context).size.width;
+    return Container(
+        height: 56,
+        width: screenWidth * 0.4,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(35),
+          color: tiffanyBlue,
+        ),
+        child: MaterialButton(
+          onPressed: loading ? null : onPress,
+          child: loading ? const Text('loading') : Text(text),
+        ));
   }
 }
