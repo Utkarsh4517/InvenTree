@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inventree/constants/colors.dart';
+import 'package:inventree/screens/product.dart';
 import 'package:inventree/widgets/gridview.dart';
 
 class HomePage extends StatefulWidget {
@@ -11,6 +12,17 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final data = ["1", "2", "3", "4"];
+
+  /// On card press function
+  onCardPress() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => ProductScreen(),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +59,9 @@ class _HomePageState extends State<HomePage> {
                 itemBuilder: (BuildContext context, int index) {
                   return GridCard(
                     index: index,
-                    onPress: () {},
+                    onPress: () {
+                      onCardPress;
+                    },
                   );
                 },
               ),
