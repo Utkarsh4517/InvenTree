@@ -16,7 +16,7 @@ void main() async{
   runApp(const MyApp());
 
     /// Stripe Setup
-  final String response = await rootBundle.loadString("assets/config/stripe.js");
+  final String response = await rootBundle.loadString("assets/config/stripe.json");
   final data = jsonDecode(response);
   Stripe.publishableKey = data["publishableKey"];
 }

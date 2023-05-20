@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inventree/constants/colors.dart';
+import 'package:inventree/widgets/gridview.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -9,6 +10,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final data = ["1", "2", "3", "4"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,6 +29,27 @@ class _HomePageState extends State<HomePage> {
               onPressed: () {},
               icon: const Icon(
                 Icons.person,
+              ),
+            ),
+          ),
+        ],
+      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: Container(
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 30,
+                  crossAxisSpacing: 30,
+                ),
+                itemBuilder: (BuildContext context, int index) {
+                  return GridCard(
+                    index: index,
+                    onPress: () {},
+                  );
+                },
               ),
             ),
           ),
