@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inventree/constants/colors.dart';
+import 'package:inventree/screens/auth_screens/login_screen.dart';
 import 'package:inventree/screens/product.dart';
 import 'package:inventree/widgets/gridview.dart';
 
@@ -18,7 +19,7 @@ class _HomePageState extends State<HomePage> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => ProductScreen(),
+        builder: (context) => LoginScreen(),
       ),
     );
   }
