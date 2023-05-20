@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
                   return GridCard(
                     index: index,
                     onPress: () {
-                      onCardPress;
+                      onCardPress();
                     },
                   );
                 },
