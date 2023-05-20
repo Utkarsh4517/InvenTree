@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:inventree/constants/colors.dart';
+import 'package:inventree/widgets/custom_button.dart';
 
 class ProductScreen extends StatefulWidget {
   const ProductScreen({super.key});
@@ -89,19 +90,65 @@ class _ProductScreenState extends State<ProductScreen> {
                         Padding(
                           padding: EdgeInsets.symmetric(vertical: 20),
                           child: Row(
-                            children: [
-                              Text("MRP: "), Text("₹ price")
-                            ],
+                            children: [Text("MRP: "), Text("₹ price")],
                           ),
                         ),
-                        
+                        CustomButton(
+                          onPress: onAddToCart,
+                          loading: addButtonload,
+                          text: "Add to Cart",
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(),
+                          child: Text(
+                            "About the items",
+                            style: TextStyle(
+                              color: spaceCadet,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.only(bottom: 20),
+                          child: Text(
+                            "Items description",
+                            style: TextStyle(
+                              color: spaceCadet,
+                              fontSize: 14,
+                            ),
+                          ),
+                        )
                       ],
                     ),
                   ),
                 ),
               ],
             ),
-          )
+          ),
+          Positioned(
+            top: 35,
+            left: 30,
+            child: Container(
+              decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(5),
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      blurRadius: 3,
+                      spreadRadius: 4,
+                      offset: Offset(1, 3),
+                    ),
+                  ]),
+              child: IconButton(
+                onPressed: () {
+                  Navigator.of(context).pop(true);
+                },
+                icon: const Icon(Icons.arrow_back),
+              ),
+            ),
+          ),
         ],
       )),
     );
