@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:inventree/constants/colors.dart';
+import 'package:inventree/screens/cart.dart';
 import 'package:inventree/screens/homepage.dart';
+import 'package:inventree/screens/profile.dart';
 
 class NavBarScreen extends StatefulWidget {
   const NavBarScreen({super.key});
@@ -21,6 +23,8 @@ class _NavBarScreenState extends State<NavBarScreen> {
 
   final List<Widget> _pages = const [
     HomePage(),
+    ProfilePage(),
+    CartPage()
 
   ];
   @override
@@ -42,7 +46,7 @@ class _NavBarScreenState extends State<NavBarScreen> {
             currentIndex: _selectedIndex,
             onTap: _navigateBottomBar,
             backgroundColor: jasmine,
-            selectedItemColor: tiffanyBlue,
+            selectedItemColor: spaceCadet,
             unselectedItemColor: Colors.white,
             elevation: 10,
             selectedFontSize: 12,
