@@ -23,9 +23,8 @@ class _NavBarScreenState extends State<NavBarScreen> {
 
   final List<Widget> _pages = const [
     HomePage(),
+    CartPage(),
     ProfilePage(),
-    CartPage()
-
   ];
   @override
   Widget build(BuildContext context) {
@@ -38,9 +37,9 @@ class _NavBarScreenState extends State<NavBarScreen> {
 
       /// BOTTOM NAVIGATION BAR
       bottomNavigationBar: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 30).copyWith(bottom: screenHeight * 0.03),
-        child: ClipRRect( 
-          
+        margin: const EdgeInsets.symmetric(horizontal: 30)
+            .copyWith(bottom: screenHeight * 0.03),
+        child: ClipRRect(
           borderRadius: BorderRadius.circular(20),
           child: BottomNavigationBar(
             currentIndex: _selectedIndex,
@@ -57,7 +56,7 @@ class _NavBarScreenState extends State<NavBarScreen> {
               BottomNavigationBarItem(
                   icon: Icon(FontAwesomeIcons.house), label: ' Home'),
               BottomNavigationBarItem(
-                  icon: Icon(FontAwesomeIcons.cartPlus), label: ' Learn'),
+                  icon: Icon(FontAwesomeIcons.cartPlus), label: ' Cart'),
               BottomNavigationBarItem(
                   icon: Icon(FontAwesomeIcons.person), label: ' Account'),
             ],
