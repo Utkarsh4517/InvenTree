@@ -25,7 +25,9 @@ class _HomePageState extends State<HomePage> {
             margin: const EdgeInsets.only(right: 10),
             child: IconButton(
               onPressed: () {},
-              icon: const Icon(Icons.person),
+              icon: const Icon(
+                Icons.person,
+              ),
             ),
           ),
         ],
