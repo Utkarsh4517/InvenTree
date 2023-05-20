@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inventree/constants/colors.dart';
+import 'package:inventree/widgets/loader.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
@@ -24,7 +25,7 @@ class CustomButton extends StatelessWidget {
         ),
         child: MaterialButton(
           onPressed: loading ? null : onPress,
-          child: loading ? const Text('loading') : Text(text),
+          child: loading ? const Loader() : Text(text),
         ));
   }
 }
