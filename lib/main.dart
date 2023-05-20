@@ -1,5 +1,9 @@
+import 'dart:convert';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:inventree/firebase_options.dart';
 import 'package:inventree/screens/homepage.dart';
 import 'package:inventree/widgets/navbar.dart';
@@ -10,6 +14,11 @@ void main() async{
     options: DefaultFirebaseOptions.currentPlatform
   );
   runApp(const MyApp());
+
+    /// Stripe Setup
+  final String response = await rootBundle.loadString("assets/config/stripe.js");
+  final data = jsonDecode(response);
+  Stripe.publishableKey = data["publishableKey"];
 }
 
 class MyApp extends StatelessWidget {
