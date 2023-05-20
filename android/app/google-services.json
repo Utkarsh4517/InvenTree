@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1018508576982",
+    "project_id": "inventree-d2560",
+    "storage_bucket": "inventree-d2560.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1018508576982:android:9fe8efee38c4e2810a6177",
+        "android_client_info": {
+          "package_name": "com.example.inventree"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1018508576982-ahffmjba723dnltjra07svb73hultqde.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwJWhyL0lXm7yq12PRiAPT0zQC0mf8YJ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1018508576982-ahffmjba723dnltjra07svb73hultqde.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
