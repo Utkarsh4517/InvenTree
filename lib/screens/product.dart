@@ -4,7 +4,11 @@ import 'package:inventree/constants/colors.dart';
 import 'package:inventree/widgets/custom_button.dart';
 
 class ProductScreen extends StatefulWidget {
-  const ProductScreen({super.key});
+  final String url;
+  const ProductScreen({
+    super.key,
+    required this.url,
+  });
 
   @override
   State<ProductScreen> createState() => _ProductScreenState();
@@ -24,6 +28,19 @@ class _ProductScreenState extends State<ProductScreen> {
     });
   }
 
+  List<String> urls = [
+    'https://iili.io/Hgh6dSs.jpg', // sprite
+    'https://iili.io/Hgh63HG.md.jpg', // redbull
+    'https://iili.io/Hgh6Jln.jpg', //
+    'https://iili.io/Hgh6FRf.md.jpg',
+    'https://iili.io/Hgh6KN4.jpg',
+    'https://iili.io/Hgh6fDl.jpg', //maggi
+    'https://iili.io/Hgh6CVS.jpg', // lux
+    'https://iili.io/Hgh6Bx2.md.jpg', // lays
+    'https://iili.io/Hgh6xf9.jpg', // kurkure
+    'https://iili.io/Hgh6ni7.jpg', // h and s
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,8 +57,7 @@ class _ProductScreenState extends State<ProductScreen> {
                       height: 500,
                       width: double.infinity,
                       child: CachedNetworkImage(
-                        imageUrl:
-                            "https://images.unsplash.com/photo-1621447504864-d8686e12698c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1069&q=80",
+                        imageUrl: "https://iili.io/Hgh6ni7.jpg",
                         fit: BoxFit.cover,
                       ),
                     ),

@@ -5,7 +5,13 @@ import 'package:inventree/constants/colors.dart';
 class GridCard extends StatelessWidget {
   final int index;
   final void Function() onPress;
+  final String url;
+  final String text;
+  final String price;
   const GridCard({
+    required this.url,
+    required this.price,
+    required this.text,
     super.key,
     required this.index,
     required this.onPress,
@@ -33,7 +39,7 @@ class GridCard extends StatelessWidget {
                   width: double.infinity,
                   child: CachedNetworkImage(
                     imageUrl:
-                        "https://images.unsplash.com/photo-1623660053975-cf75a8be0908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80",
+                        url,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -41,11 +47,11 @@ class GridCard extends StatelessWidget {
               Expanded(
                 flex: 3,
                 child: Column(
-                  children: const [
+                  children:  [
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 4),
                       child: Text(
-                        "title",
+                        text,
                         style: TextStyle(
                           color: spaceCadet,
                           fontSize: 16,
@@ -53,7 +59,7 @@ class GridCard extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "price",
+                      price,
                       style: TextStyle(
                         color: spaceCadet,
                         fontSize: 14,

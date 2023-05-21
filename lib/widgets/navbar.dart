@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:inventree/constants/colors.dart';
-import 'package:inventree/screens/cart.dart';
+import 'package:inventree/screens/cart_page.dart';
 import 'package:inventree/screens/homepage.dart';
 import 'package:inventree/screens/profile.dart';
 
